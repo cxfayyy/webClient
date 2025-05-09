@@ -1,0 +1,19 @@
+import { createBrowserRouter } from "react-router-dom"
+import LandingPages from "./pages/landingPages"
+import Contact from "./pages/contact"
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    children: [
+      {
+        path: "",
+        element: <LandingPages />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
+  },
+])
